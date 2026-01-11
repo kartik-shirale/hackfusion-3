@@ -315,29 +315,29 @@ flowchart TB
     subgraph Trace["Trace: Order #12345"]
         direction TB
         
-        subgraph S1["🧠 Conversation Agent (1.1s)"]
-            T1[Thought: 'BP medicine' ambiguous]
-            T2[Tool: getUserHistory → Amlodipine]
-            T3[Output: Amlodipine 5mg × 20]
+        subgraph S1["🧠 Conversation Agent - 1.1s"]
+            T1["Thought: BP medicine ambiguous"]
+            T2["Tool: getUserHistory → Amlodipine"]
+            T3["Output: Amlodipine 5mg x 20"]
         end
         
-        subgraph S2["🛡️ Safety Agent (0.8s)"]
-            T4[Tool: checkStock → OK]
-            T5[Tool: validatePrescription → Valid]
-            T6[Tool: checkInteractions → None]
-            T7[Decision: APPROVED ✅]
+        subgraph S2["🛡️ Safety Agent - 0.8s"]
+            T4["Tool: checkStock → OK"]
+            T5["Tool: validatePrescription → Valid"]
+            T6["Tool: checkInteractions → None"]
+            T7["Decision: APPROVED ✅"]
         end
         
-        subgraph S3["⚡ Action Agent (2.3s)"]
-            T8[Tool: createOrder → #12345]
-            T9[Tool: updateInventory → -20]
-            T10[Tool: sendNotification → Sent]
+        subgraph S3["⚡ Action Agent - 2.3s"]
+            T8["Tool: createOrder → #12345"]
+            T9["Tool: updateInventory → -20"]
+            T10["Tool: sendNotification → Sent"]
         end
         
         S1 --> S2 --> S3
     end
     
-    Meta[Session: john_doe | Duration: 4.2s | Tokens: 2,847]
+    Meta["Session: john_doe • Duration: 4.2s • Tokens: 2,847"]
 ```
 
 ---
