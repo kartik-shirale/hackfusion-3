@@ -204,7 +204,7 @@ sequenceDiagram
 
 ## 📊 Data Flow Diagrams
 
-### DFD Level 0: Context
+### Context Diagram
 
 ```mermaid
 flowchart TB
@@ -220,7 +220,7 @@ flowchart TB
     SYS -->|Traces| LF([👁️ Langfuse])
 ```
 
-### DFD Level 1: Core Processes
+### Core Processes
 
 ```mermaid
 flowchart TB
@@ -261,7 +261,7 @@ flowchart TB
     DB[(Database)] <--> P1 & P2 & P3 & P4
 ```
 
-### DFD Level 2: Safety Validation
+### Safety Validation Flow
 
 ```mermaid
 flowchart TB
@@ -285,7 +285,7 @@ flowchart TB
     Rejected --> User[Return to User]
 ```
 
-### DFD Level 2: Proactive Intelligence
+### Proactive Intelligence Flow
 
 ```mermaid
 flowchart TB
